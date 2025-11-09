@@ -1,0 +1,90 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Sarah",
+      "lastName": "Johnson",
+      "email": "s.johnson@example.com",
+      "age": 42,
+      "painLocation": "lower-back-left",
+      "painLevel": 7,
+      "diagnosisDate": "2024-03-15"
+    },
+    {
+      "id": 2,
+      "firstName": "Maria",
+      "lastName": "Garcia",
+      "email": "m.garcia@example.com",
+      "age": 35,
+      "painLocation": "lower-back-right",
+      "painLevel": 5,
+      "diagnosisDate": "2024-06-22"
+    },
+    {
+      "id": 3,
+      "firstName": "Jennifer",
+      "lastName": "Lee",
+      "email": "j.lee@example.com",
+      "age": 51,
+      "painLocation": "glute-left",
+      "painLevel": 8,
+      "diagnosisDate": "2023-11-10"
+    },
+    {
+      "id": 4,
+      "firstName": "Amanda",
+      "lastName": "Williams",
+      "email": "a.williams@example.com",
+      "age": 38,
+      "painLocation": "calf-right",
+      "painLevel": 6,
+      "diagnosisDate": "2024-01-08"
+    }
+  ],
+  "userExerciseLogs": [
+    {
+      "id": 1,
+      "userId": 1,
+      "exerciseType": "stretch",
+      "exerciseName": "Piriformis Stretch",
+      "date": "2025-10-24",
+      "painBefore": 7,
+      "painAfter": 5,
+      "effective": true,
+      "notes": "Felt immediate relief in glute area"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "exerciseType": "strengthening",
+      "exerciseName": "Glute Bridges",
+      "date": "2025-10-26",
+      "painBefore": 6,
+      "painAfter": 6,
+      "effective": false,
+      "notes": "No significant change, might need to increase repetitions. Performed 3 sets of 8 reps."
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "exerciseType": "stretch",
+      "exerciseName": "Cobra Stretch",
+      "date": "2025-10-27",
+      "painBefore": 5,
+      "painAfter": 3,
+      "effective": true,
+      "notes": "Good relief, will continue daily"
+    },
+    {
+      "id": 4,
+      "userId": 3,
+      "exerciseType": "strengthening",
+      "exerciseName": "Pelvic Tilts",
+      "date": "2025-10-25",
+      "painBefore": 8,
+      "painAfter": 7,
+      "effective": true,
+      "notes": "Slight improvement, core felt stronger"
+    }
+  ]
+}
