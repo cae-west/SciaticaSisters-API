@@ -6,7 +6,8 @@ The API lets patients store user info, track exercises, and spot patterns to tak
 About 25% of sciatica patients have long-term pain. This API gives them tools to manage these ongoing
 issues.
 
-**[Getting Started](overview/getting-started.md)** - Ready to get started? Learn what you need to set up your system.
+**[Getting Started](overview/getting-started.md)** - Ready to get started? Learn what you need to set
+up your system.
 
 **[Full Topic List](overview/topic-list.md)** - See a full list of tutorials and reference docs.
 
