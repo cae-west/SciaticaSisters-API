@@ -96,7 +96,7 @@ needing to update their entire profile.
 
 - **[Log your first activity](log-first-activity.md)** to start tracking exercises.
 - **[Compare exercises](compare-exercises.md)** to see which activities are effective.
-- **[Update a user's pain level](update-pain-level.md)** when pain changes.
+- **[Create a user profile](create-user-profile.md)** to add a patient.
 
 ## Related topics
 
