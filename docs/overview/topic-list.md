@@ -20,10 +20,11 @@ This page lists all available docs for the Sciatica Sisters API.
 
 Step-by-step guides for common tasks:
 
-1. **Create Your First User Profile** - coming soon
-2. **Log Your First Activity** - coming soon
-3. **Track Pain Over Time** - coming soon
-4. **Compare Exercises** - coming soon
+1. **[Create your first user profile](../tutorials/create-user-profile.md)**
+2. **[Log your first exercise](../tutorials/log-first-activity.md)**
+3. **[Update a user's pain level](../tutorials/update-pain-level.md)**
+4. **[Compare exercises](../tutorials/compare-exercises.md)**
+5. **[Remove an exercise](../tutorials/remove-exercise.md)**
 
 ---
 
