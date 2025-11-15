@@ -1,0 +1,6 @@
+title: SciaticaSisters API Documentation
+description: Documentation, tutorials, and reference pages for the SciaticaSisters API
+show_downloads: false
+remote_theme: pages-themes/architect@v0.2.0
+plugins:
+  - jekyll-remote-theme
