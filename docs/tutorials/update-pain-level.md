@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Tutorial: Update a user's pain level
 
 In this tutorial, you'll learn how to update a user's pain level using the `PATCH` method to

@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Tutorial: Remove an exercise log
 
 In this tutorial, you'll learn how to remove an exercise log using the `DELETE` method to remove entries

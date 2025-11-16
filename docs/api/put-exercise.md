@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Update an exercise log by ID
 
 This operation replaces all properties of an existing exercise log by ID.

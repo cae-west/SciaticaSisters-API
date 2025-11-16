@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Get an exercise log by ID
 
 This operation retrieves a specific exercise log by its ID.

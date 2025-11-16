@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Tutorial: Update a user profile
 
 In this tutorial, you'll learn how to update a complete user profile using the `PUT` method to reflect

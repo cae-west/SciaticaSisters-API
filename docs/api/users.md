@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Users resource
 
 **Base endpoint:**

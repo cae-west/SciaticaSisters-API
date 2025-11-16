@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # User exercise logs resource
 
 **Base endpoint:**

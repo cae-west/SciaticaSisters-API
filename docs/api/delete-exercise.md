@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Delete an exercise log by ID
 
 This operation deletes an exercise log by ID.

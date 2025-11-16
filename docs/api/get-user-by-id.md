@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Get a user by ID
 
 This operation retrieves a specific user profile by its ID.
