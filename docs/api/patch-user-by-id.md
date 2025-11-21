@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Update a user by ID
+# Patch user by ID
 
 This operation updates or patches one or more properties of an existing user by ID.
 
@@ -48,24 +48,12 @@ Include only the properties you want to update. All fields are optional.
 
 ---
 
-## Curl request
-
-```bash
-curl -X PATCH http://localhost:3000/users/1 \
-  -H "Content-Type: application/json" \
-  -d '{
-    "painLevel": 5
-  }'
-```
-
----
-
 ## Example: Update pain level
 
 **Request:**
 
 ```bash
-curl -X PATCH http://localhost:3000/users/1 \
+curl -X PATCH {base_url}/users/1 \
   -H "Content-Type: application/json" \
   -d '{
     "painLevel": 5
@@ -136,5 +124,5 @@ Returns the complete updated user object with all properties.
 ## Related topics
 
 - [Users resource](users.md)
-- [Create new user](post-user.md)
+- [Post a new user](post-user.md)
 - [Get user by ID](get-user-by-id.md)

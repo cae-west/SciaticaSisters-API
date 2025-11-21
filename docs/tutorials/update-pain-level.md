@@ -35,7 +35,7 @@ This example updates the pain level for a user from 7 to 4.
    3. In the request URL field, enter:
 
       ```shell
-      http://localhost:3000/users/1
+      {base_url}/users/1
       ```
 
 3. Set up the request headers:
@@ -82,7 +82,7 @@ field changed, while all other fields remained the same.
    3. In the request URL field, enter:
 
       ```shell
-      http://localhost:3000/users/1
+      {base_url}/users/1
       ```
 
    4. Click **Send**.
@@ -104,5 +104,10 @@ needing to update their entire profile.
 
 ## Related topics
 
-- **[Update exercise by ID](../api/put-exercise.md)**
-- **[Delete an exercise](../api/delete-exercise.md)**
+- **[Put exercise log by ID](../api/put-exercise.md)**
+- **[Delete exercise log by ID](../api/delete-exercise.md)**
+
+## Security note
+
+In a production environment, this operation would require proper authentication to ensure only
+authorized users can change patient data. See [Authentication](../overview/authentication.md) for details.

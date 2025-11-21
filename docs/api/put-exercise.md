@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Update an exercise log by ID
+# Put exercise log by ID
 
 This operation replaces all properties of an existing exercise log by ID.
 
@@ -49,31 +49,12 @@ All fields required for a `PUT` operation.
 
 ---
 
-## Curl request
-
-```bash
-curl -X PUT http://localhost:3000/userExerciseLogs/1 \
-  -H "Content-Type: application/json" \
-  -d '{
-    "userId": 1,
-    "exerciseType": "stretch",
-    "exerciseName": "Piriformis Stretch",
-    "date": "2025-10-24",
-    "painBefore": 7,
-    "painAfter": 4,
-    "effective": true,
-    "notes": "Felt immediate relief in glute area. Held stretch for 45 seconds."
-  }'
-```
-
----
-
 ## Example: Update complete exercise log
 
 **Request:**
 
 ```bash
-curl -X PUT http://localhost:3000/userExerciseLogs/1 \
+curl -X PUT {base_url}/userExerciseLogs/1 \
   -H "Content-Type: application/json" \
   -d '{
     "userId": 1,
@@ -156,5 +137,5 @@ Returns the complete updated exercise log object with all properties.
 ## Related topics
 
 - [Exercise logs resource page](user-exercise-logs.md)
-- [Get exercise by ID](get-exercise-by-id.md)
-- [Delete exercise log](delete-exercise.md)
+- [Get exercise log by ID](get-exercise-by-id.md)
+- [Delete exercise log by ID](delete-exercise.md)
