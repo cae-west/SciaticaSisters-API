@@ -114,4 +114,9 @@ method instead.
 
 - **[Get a user by ID](../api/get-user-by-id.md)**
 - **[Update a user by ID](../api/patch-user-by-id.md)**
+
+## Security note
+
+In a production environment, this operation would require proper authentication to ensure only
+authorized users can change patient data. See [Authentication](../overview/authentication.md) for details.
   

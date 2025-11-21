@@ -118,3 +118,8 @@ before and after each activity. This helps users identify which exercises are wo
 
 - **[Get exercise by ID](../api/get-exercise-by-id.md)**
 - **[Update exercise by ID](../api/put-exercise.md)**
+
+## Security note
+
+In a production environment, this operation would require proper authentication to ensure only
+authorized users can change patient data. See [Authentication](../overview/authentication.md) for details.

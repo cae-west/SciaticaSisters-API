@@ -106,3 +106,8 @@ needing to update their entire profile.
 
 - **[Update exercise by ID](../api/put-exercise.md)**
 - **[Delete an exercise](../api/delete-exercise.md)**
+
+## Security note
+
+In a production environment, this operation would require proper authentication to ensure only
+authorized users can change patient data. See [Authentication](../overview/authentication.md) for details.

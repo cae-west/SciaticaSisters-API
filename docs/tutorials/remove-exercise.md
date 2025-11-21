@@ -76,3 +76,8 @@ with Postman. This is useful for removing exercises that didn't help or for clea
 
 - **[Get exercise by ID](../api/get-exercise-by-id.md)**
 - **[Update exercise by ID](../api/put-exercise.md)**
+
+## Security note
+
+In a production environment, this operation would require proper authentication to ensure only
+authorized users can change patient data. See [Authentication](../overview/authentication.md) for details.
