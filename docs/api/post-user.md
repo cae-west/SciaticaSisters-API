@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Create a new user
 
 This operation creates a new user profile in the service.

@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Tutorial: Create your first user profile
 
 In this tutorial, you'll learn how to create a new user profile using the `POST` method to add a new

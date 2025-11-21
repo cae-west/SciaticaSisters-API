@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Update a user by ID
 
 This operation updates or patches one or more properties of an existing user by ID.

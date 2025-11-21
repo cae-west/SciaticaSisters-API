@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Tutorial: Log your first activity
 
 In this tutorial, you'll learn how to create an exercise log using the `POST` method to track your pain

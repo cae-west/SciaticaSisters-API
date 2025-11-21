@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Topic list
 
 This page lists all available docs for the Sciatica Sisters API.

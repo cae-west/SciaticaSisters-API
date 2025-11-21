@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Tutorial: Compare exercises
 
 In this tutorial, you'll learn how to retrieve and view exercise logs to see which activities helped
