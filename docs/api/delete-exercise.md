@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Delete an exercise log by ID
+# Delete exercise log by ID
 
 This operation deletes an exercise log by ID.
 
@@ -38,20 +38,12 @@ This operation doesn't require a request body.
 
 ---
 
-## Curl request
-
-```bash
-curl -X DELETE http://localhost:3000/userExerciseLogs/1
-```
-
----
-
 ## Example request
 
 **Request:**
 
 ```bash
-curl -X DELETE http://localhost:3000/userExerciseLogs/1
+curl -X DELETE {base_url}/userExerciseLogs/1
 ```
 
 **Response - Success:**
@@ -68,4 +60,4 @@ Returns an empty JSON object `{}`.
 
 - [Exercise logs resource page](user-exercise-logs.md)
 - [Get exercise log by ID](get-exercise-by-id.md)
-- [Update exercise by ID](put-exercise.md)
+- [Put exercise log by ID](put-exercise.md)

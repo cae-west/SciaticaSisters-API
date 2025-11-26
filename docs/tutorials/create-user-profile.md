@@ -34,7 +34,7 @@ This example creates a profile for a new user named Emma Davis.
    3. In the request URL field, enter:
 
       ```shell
-      http://localhost:3000/users
+      {base_url}/users
       ```
 
 3. Set up the request headers:
@@ -87,7 +87,7 @@ generates the `id` field.
    3. In the request URL field, enter:
 
       ```shell
-      http://localhost:3000/users
+      {base_url}/users
       ```
 
    4. Click **Send**.
@@ -109,5 +109,10 @@ journey.
 
 ## Related topics
 
-- **[Get a user by ID](../api/get-user-by-id.md)**
-- **[Update a user by ID](../api/patch-user-by-id.md)**
+- **[Get user by ID](../api/get-user-by-id.md)**
+- **[Patch user by ID](../api/patch-user-by-id.md)**
+
+## Security note
+
+In a production environment, this operation would require proper authentication to ensure only
+authorized users can change patient data. See [Authentication](../overview/authentication.md) for details.

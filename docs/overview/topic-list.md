@@ -46,9 +46,9 @@ Resources for this API:
 
 Reference documentation for resources:
 
-- **[Get user by ID](../api/get-user-by-id.md)**
-- **[Create new user](../api/post-user.md)**
-- **[Patch user by ID](../api/patch-user-by-id.md)**
-- **[Get exercise by ID](../api/get-exercise-by-id.md)**
-- **[Update exercise by ID](../api/put-exercise.md)**
+- **[Get user](../api/get-user-by-id.md)**
+- **[Post user](../api/post-user.md)**
+- **[Patch user](../api/patch-user-by-id.md)**
+- **[Get exercise](../api/get-exercise-by-id.md)**
+- **[Put exercise](../api/put-exercise.md)**
 - **[Delete exercise](../api/delete-exercise.md)**

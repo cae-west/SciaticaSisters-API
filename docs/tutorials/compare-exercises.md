@@ -34,7 +34,7 @@ This example retrieves all exercise logs for Sarah Johnson, user ID 1.
    3. In the request URL field, enter:
 
       ```shell
-      http://localhost:3000/userExerciseLogs
+      {base_url}/userExerciseLogs
       ```
 
 3. Filter by user ID:
@@ -116,5 +116,10 @@ before and after each activity. This helps users identify which exercises are wo
 
 ## Related topics
 
-- **[Get exercise by ID](../api/get-exercise-by-id.md)**
-- **[Update exercise by ID](../api/put-exercise.md)**
+- **[Get exercise log by ID](../api/get-exercise-by-id.md)**
+- **[Put exercise log by ID](../api/put-exercise.md)**
+
+## Security note
+
+In a production environment, this operation would require proper authentication to ensure only
+authorized users can change patient data. See [Authentication](../overview/authentication.md) for details.

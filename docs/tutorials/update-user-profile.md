@@ -36,7 +36,7 @@ age and current pain information.
    3. In the request URL field, enter:
 
       ```shell
-      http://localhost:3000/users/1
+      {base_url}/users/1
       ```
 
 3. Set up the request headers:
@@ -89,7 +89,7 @@ new values, while the `id` remains the same.
    3. In the request URL field, enter:
 
       ```shell
-      http://localhost:3000/users/1
+      {base_url}/users/1
       ```
 
    4. Click **Send**.
@@ -112,6 +112,11 @@ method instead.
 
 ## Related topics
 
-- **[Get a user by ID](../api/get-user-by-id.md)**
-- **[Update a user by ID](../api/patch-user-by-id.md)**
+- **[Get user by ID](../api/get-user-by-id.md)**
+- **[Patch user by ID](../api/patch-user-by-id.md)**
+
+## Security note
+
+In a production environment, this operation would require proper authentication to ensure only
+authorized users can change patient data. See [Authentication](../overview/authentication.md) for details.
   

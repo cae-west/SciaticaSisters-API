@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Create a new user
+# Post a new user
 
 This operation creates a new user profile in the service.
 
@@ -40,30 +40,12 @@ All fields required unless marked as optional.
 
 ---
 
-## Curl request
-
-```bash
-curl -X POST http://localhost:3000/users \
-  -H "Content-Type: application/json" \
-  -d '{
-    "firstName": "Emma",
-    "lastName": "Davis",
-    "email": "e.davis@example.com",
-    "age": 45,
-    "painLocation": "glute-right",
-    "painLevel": 6,
-    "diagnosisDate": "2025-01-15"
-  }'
-```
-
----
-
 ## Example request
 
 **Request:**
 
 ```bash
-curl -X POST http://localhost:3000/users \
+curl -X POST {base_url}/users \
   -H "Content-Type: application/json" \
   -d '{
     "firstName": "Emma",
@@ -142,4 +124,4 @@ Returns the newly created user object with all properties including the assigned
 
 - [Users resource](users.md)
 - [Get user by ID](get-user-by-id.md)
-- [Update user by ID](patch-user-by-id.md)
+- [Patch user by ID](patch-user-by-id.md)

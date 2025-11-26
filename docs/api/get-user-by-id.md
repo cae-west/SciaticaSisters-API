@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Get a user by ID
+# Get user by ID
 
 This operation retrieves a specific user profile by its ID.
 
@@ -38,20 +38,12 @@ This operation doesn't require a request body.
 
 ---
 
-## Curl request
-
-```bash
-curl -X GET http://localhost:3000/users/1
-```
-
----
-
 ## Example request
 
 **Request:**
 
 ```bash
-curl -X GET http://localhost:3000/users/1
+curl -X GET {base_url}/users/1
 ```
 
 **Response - Success:**
@@ -87,5 +79,5 @@ Returns the user object with the specified ID.
 ## Related topics
 
 - [Users resource](users.md)
-- [Create new user](post-user.md)
-- [Update user by ID](patch-user-by-id.md)
+- [Post a new user](post-user.md)
+- [Patch user by ID](patch-user-by-id.md)

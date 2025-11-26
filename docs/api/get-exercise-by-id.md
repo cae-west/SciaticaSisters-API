@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Get an exercise log by ID
+# Get exercise log by ID
 
 This operation retrieves a specific exercise log by its ID.
 
@@ -11,7 +11,7 @@ This operation retrieves a specific exercise log by its ID.
 ## Endpoint structure
 
 ```shell
-GET /userExerciseLogs/{id}
+GET /users/{id}
 ```
 
 ---
@@ -38,20 +38,12 @@ This operation doesn't require a request body.
 
 ---
 
-## Curl request
-
-```bash
-curl -X GET http://localhost:3000/userExerciseLogs/1
-```
-
----
-
 ## Example request
 
 **Request:**
 
 ```bash
-curl -X GET http://localhost:3000/userExerciseLogs/1
+curl -X GET {base_url}/userExerciseLogs/1
 ```
 
 **Response - Success:**
@@ -89,5 +81,5 @@ Returns the exercise log object with the specified ID.
 ## Related topics
 
 - [Exercise logs resource page](user-exercise-logs.md)
-- [Update exercise by ID](put-exercise.md)
-- [Delete exercise log](delete-exercise.md)
+- [Put exercise log by ID](put-exercise.md)
+- [Delete exercise log by ID](delete-exercise.md)

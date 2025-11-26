@@ -34,7 +34,7 @@ This example removes the Glute Bridges exercise log, ID 2, which wasn't effectiv
    3. In the request URL field, enter:
 
       ```shell
-      http://localhost:3000/userExerciseLogs/2
+      {base_url}/userExerciseLogs/2
       ```
 
 3. Click **Send** to make the request.
@@ -53,7 +53,7 @@ This example removes the Glute Bridges exercise log, ID 2, which wasn't effectiv
    3. In the request URL field, enter:
 
       ```shell
-      http://localhost:3000/userExerciseLogs?userId=1
+      {base_url}/userExerciseLogs?userId=1
       ```
 
    4. Click **Send**.
@@ -74,5 +74,10 @@ with Postman. This is useful for removing exercises that didn't help or for clea
 
 ## Related topics
 
-- **[Get exercise by ID](../api/get-exercise-by-id.md)**
-- **[Update exercise by ID](../api/put-exercise.md)**
+- **[Get exercise log by ID](../api/get-exercise-by-id.md)**
+- **[Put exercise log by ID](../api/put-exercise.md)**
+
+## Security note
+
+In a production environment, this operation would require proper authentication to ensure only
+authorized users can change patient data. See [Authentication](../overview/authentication.md) for details.

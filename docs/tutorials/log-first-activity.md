@@ -35,7 +35,7 @@ This example logs a Piriformis Stretch performed by Sarah Johnson, user ID 1.
    3. In the request URL field, enter:
 
       ```shell
-      http://localhost:3000/userExerciseLogs
+      {base_url}/userExerciseLogs
       ```
 
 3. Set up the request headers:
@@ -90,7 +90,8 @@ generates the `id` field.
    3. In the request URL field, enter:
 
       ```shell
-      http://localhost:3000/userExerciseLogs?userId=1
+      {base_url}/userExerciseLogs?userId=1
+      
       ```
 
    4. Click **Send**.
@@ -111,5 +112,10 @@ with Postman. This allows users to track which exercises help reduce their pain 
 
 ## Related topics
 
-- **[Get exercise by ID](../api/get-exercise-by-id.md)**
-- **[Update exercise by ID](../api/put-exercise.md)**
+- **[Get exercise log by ID](../api/get-exercise-by-id.md)**
+- **[Put exercise log by ID](../api/put-exercise.md)**
+
+## Security note
+
+In a production environment, this operation would require proper authentication to ensure only
+authorized users can change patient data. See [Authentication](../overview/authentication.md) for details.

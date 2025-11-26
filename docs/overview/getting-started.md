@@ -8,9 +8,10 @@ layout: default
 
 ## About the API
 
-- **Base URL**: `http://localhost:3000` or your own `{base_url}` server.
+- **HTTP method**: Local service at `http://localhost:3000` is accessible at your configured `{base_url}`
 - **Data format**: JSON for all requests and responses
 - **Server**: This API runs on your local machine or your chosen server environment
+- **Authentication**: See [Authentication](authentication.md) for more information
 
 ---
 
@@ -46,9 +47,15 @@ To use the Sciatica Sisters API, you need:
 
 ---
 
-## Test with curl
+## Curl testing
 
 Open a new terminal window and run:
+
+```bash
+curl {base_url}/users
+```
+
+For local development, use:
 
 ```bash
 curl http://localhost:3000/users
@@ -58,12 +65,12 @@ You should see a list of users in JSON format.
 
 ---
 
-## Test with Postman
+## Postman testing
 
 1. Open the Postman desktop app
 2. Create a new request
 3. Set method to `GET`
-4. Enter URL: `http://localhost:3000/users`
+4. Enter URL: `{base_url}/users` or `http://localhost:3000/users` for local testing
 5. Click **Send**
 
 You should see a list of users in the response.
