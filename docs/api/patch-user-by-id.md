@@ -41,9 +41,9 @@ Include only the properties you want to update. All fields are optional.
 | `firstName` | string | User's first name |
 | `lastName` | string | User's last name |
 | `email` | string | User's email address |
-| `age` | number | User's age |
+| `age` | integer | User's age |
 | `painLocation` | string | Location of sciatica pain |
-| `painLevel` | number | Current pain level on a 1-10 scale |
+| `painLevel` | integer | Current pain level on a 1-10 scale |
 | `diagnosisDate` | string | Date of diagnosis - Year-Month-Day format |
 
 ---

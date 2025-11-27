@@ -51,13 +51,13 @@ Learn more about the [users resource](users.md).
 
 | Property name | Type | Description |
 |---|---|---|
-| `id` | number | The log's unique record ID |
-| `userId` | number | The ID of the user who recorded this exercise |
+| `id` | integer | The log's unique record ID |
+| `userId` | integer | The ID of the user who recorded this exercise |
 | `exerciseType` | string | Exercise performed |
 | `exerciseName` | string | Name of the exercise performed |
 | `date` | string | Date of exercise - Year-Month-Day format |
-| `painBefore` | number | Pain level before exercise on a scale of 1-10 |
-| `painAfter` | number | Pain level after exercise on a scale of 1-10 |
+| `painBefore` | integer | Pain level before exercise on a scale of 1-10 |
+| `painAfter` | integer | Pain level after exercise on a scale of 1-10 |
 | `effective` | boolean | Whether the exercise was effective - true/false |
 | `notes` | string | More notes about the exercise session |
 

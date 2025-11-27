@@ -1,10 +1,22 @@
 # Sciatica Sisters API overview
 
-Sciatica Sisters is an API for helping developers build apps that track sciatica pain.
-The API lets patients store user info, track exercises, and spot patterns to take charge of their healing.
+Sciatica Sisters is a **REST API** for helping developers build apps that track sciatica pain. The API
+lets patients store user info, track exercises, and spot patterns to take charge of their healing.
 
-About 25% of sciatica patients have long-term pain. This API gives them tools to manage these ongoing
-issues.
+## About sciatica
+
+Sciatica is pain that radiates along the sciatic nerve, which runs from the lower back through the hips
+and down each leg. About 25% of sciatica patients experience long-term symptoms. This API provides tools
+to help manage these ongoing issues through exercise tracking and pain pattern analysis.
+
+**Learn more about sciatica:**
+
+- [Mayo Clinic - Sciatica](https://www.mayoclinic.org/diseases-conditions/sciatica/symptoms-causes/syc-20377435)
+- [National Institute of Neurological Disorders and Stroke - Low Back Pain](https://www.ninds.nih.gov/health-information/disorders/low-back-pain)
+
+---
+
+## Read first
 
 **[Getting Started](overview/getting-started.md)** - Ready to get started? Learn what you need to set
 up your system.

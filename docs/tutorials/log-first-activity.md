@@ -4,10 +4,9 @@ layout: default
 
 # Tutorial: Log your first activity
 
-In this tutorial, you'll learn how to create an exercise log using the `POST` method to track your pain
-levels before and after an activity.
-
-Expect this tutorial to take about 10 minutes to complete.
+In this tutorial, you'll create an exercise log using the `POST` method to track a user's pain levels
+before and after an activity. This helps build a personal database of what brings a user relief to optimize
+their recovery strategy. This tutorial takes about 10 minutes to complete.
 
 ## Before you start
 
@@ -16,9 +15,9 @@ system you'll use for the tutorial.
 
 ## Log an exercise activity
 
-Logging an exercise activity requires using the `POST` method to add a new [user exercise log](../api/user-exercise-logs.md)
-resource to the service. The `POST` method creates a new log entry with pain levels, exercise details,
-and notes.
+Logging an exercise activity requires using the `POST` method to add a new
+[user exercise log](../api/user-exercise-logs.md) resource to the service. The `POST` method
+creates a new log entry with pain levels, exercise details, and notes.
 
 This example logs a Piriformis Stretch performed by Sarah Johnson, user ID 1.
 
@@ -29,7 +28,9 @@ This example logs a Piriformis Stretch performed by Sarah Johnson, user ID 1.
     json-server -w sciatica-sisters-db-source.json
     ```
 
-2. Open Postman and create a new request:
+### Postman request
+
+1. Open Postman and create a new request:
    1. Click **New** > **HTTP** or the **+** icon in the header.
    2. Set the request method to `POST` using the corresponding dropdown menu.
    3. In the request URL field, enter:
@@ -38,13 +39,13 @@ This example logs a Piriformis Stretch performed by Sarah Johnson, user ID 1.
       {base_url}/userExerciseLogs
       ```
 
-3. Set up the request headers:
+2. Set up the request headers:
    1. Click the **Headers** tab below the URL field.
    2. Add a header:
       - **Key:** `Content-Type`
       - **Value:** `application/json`
 
-4. Set up the request body:
+3. Set up the request body:
    1. Click the **Body** tab below the URL field.
    2. Select **raw** from the radio button options.
    3. Select **JSON** from the dropdown menu on the right.
@@ -63,10 +64,10 @@ This example logs a Piriformis Stretch performed by Sarah Johnson, user ID 1.
       }
       ```
 
-5. Click **Send** to make the request.
+4. Click **Send** to make the request.
 
-6. The system returns the complete new exercise log with an assigned ID. Note that the system automatically
-generates the `id` field.
+5. The system returns the complete new exercise log with an assigned ID. Note that the system automatically
+generates the `id` field. You've just created your first data point for tracking a user's recovery.
 
     ```json
     {
@@ -82,27 +83,91 @@ generates the `id` field.
     }
     ```
 
-## Verify your results
+### cURL request
 
-1. To confirm you successfully created the exercise log, retrieve all logs for the user:
-   1. Create a new request in Postman.
-   2. Set the request method to `GET`.
-   3. In the request URL field, enter:
+1. Open your terminal and run this command:
 
-      ```shell
-      {base_url}/userExerciseLogs?userId=1
-      
-      ```
+   ```bash
+   curl -X POST {base_url}/userExerciseLogs \
+     -H "Content-Type: application/json" \
+     -d '{
+       "userId": 1,
+       "exerciseType": "stretch",
+       "exerciseName": "Piriformis Stretch",
+       "date": "2025-11-14",
+       "painBefore": 7,
+       "painAfter": 5,
+       "effective": true,
+       "notes": "Felt immediate relief in glute area"
+     }'
+   ```
 
-   4. Click **Send**.
+2. The system returns the complete new exercise log with an assigned ID. Note that the system automatically
+generates the `id` field. You've just created your first data point for tracking a user's recovery.
+
+    ```json
+    {
+      "id": 5,
+      "userId": 1,
+      "exerciseType": "stretch",
+      "exerciseName": "Piriformis Stretch",
+      "date": "2025-11-14",
+      "painBefore": 7,
+      "painAfter": 5,
+      "effective": true,
+      "notes": "Felt immediate relief in glute area"
+    }
+    ```
+
+## Check your results
+
+### Postman verification
+
+1. Create a new request in Postman.
+2. Set the request method to `GET`.
+3. In the request URL field, enter:
+
+   ```shell
+   {base_url}/userExerciseLogs?userId=1
+   ```
+
+4. Click **Send**.
+
+5. You should see the new exercise log in the list for Sarah Johnson. The log shows the pain reduction
+from 7 to 5.
+
+### Using cURL
+
+1. Run this command:
+
+   ```bash
+   curl -X GET "{base_url}/userExerciseLogs?userId=1"
+   ```
 
 2. You should see the new exercise log in the list for Sarah Johnson. The log shows the pain reduction
 from 7 to 5.
 
+## Common errors and troubleshooting
+
+### Missing required fields
+
+If you receive a 400 Bad Request error, ensure all required fields are in your request body: `userId`,
+`exerciseType`, `exerciseName`, `date`, `painBefore`, `painAfter`, `effective`, and `notes`.
+
+### Invalid exercise type
+
+The `exerciseType` field only accepts two values: `stretch` or `strengthening`. Using any other value
+may cause an error or unexpected behavior.
+
+### User ID doesn't exist
+
+If the log you created doesn't link properly, the `userId` might reference a user that doesn't exist.
+Check that the user exists first by calling `GET` on `/users/{id}` before creating exercise logs.
+
 ## What you learned
 
 After completing this tutorial, you now know how to log an exercise activity using the `POST` method
-with Postman. This allows users to track which exercises help reduce their pain over time.
+with Postman or cURL. This allows users to track which exercises help reduce their pain over time.
 
 ## Next steps
 

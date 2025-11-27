@@ -49,13 +49,13 @@ Learn more about the [user exercise logs resource](user-exercise-logs.md).
 
 | Property name | Type | Description |
 |---|---|---|
-| `id` | number | The user's unique record ID |
+| `id` | integer | The user's unique record ID |
 | `firstName` | string | The user's first name |
 | `lastName` | string | The user's last name |
 | `email` | string | The user's email address |
-| `age` | number | The user's age |
+| `age` | integer | The user's age |
 | `painLocation` | string | Location of the user's sciatica pain |
-| `painLevel` | number | Current pain level on a scale of 1-10 |
+| `painLevel` | integer | Current pain level on a scale of 1-10 |
 | `diagnosisDate` | string | Date of sciatica diagnosis - Year-Month-Day format |
 
 ---
