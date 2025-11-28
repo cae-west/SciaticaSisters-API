@@ -20,6 +20,12 @@ This page lists all available docs for the Sciatica Sisters API.
 
 ---
 
+## Security and authentication
+
+- **[Authentication](authentication.md)** - Information about security and data authentication
+
+---
+
 ## Tutorials
 
 Step-by-step guides for common tasks:
@@ -46,9 +52,18 @@ Resources for this API:
 
 Reference documentation for resources:
 
+### User reference docs
+
 - **[Get user](../api/get-user-by-id.md)**
 - **[Post user](../api/post-user.md)**
 - **[Patch user](../api/patch-user-by-id.md)**
+- **[Put user](../api/put-user.md)**
+- **[Delete user](../api/delete-user.md)**
+
+### Exercise reference docs
+
 - **[Get exercise](../api/get-exercise-by-id.md)**
+- **[Post exercise](../api/post-exercise.md)**
+- **[Patch exercise](../api/patch-exercise-by-id.md)**
 - **[Put exercise](../api/put-exercise.md)**
 - **[Delete exercise](../api/delete-exercise.md)**

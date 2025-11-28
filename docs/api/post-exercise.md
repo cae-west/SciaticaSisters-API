@@ -2,25 +2,17 @@
 layout: default
 ---
 
-# Put exercise log by ID
+# Post a new exercise log
 
-This operation replaces all properties of an existing exercise log by ID.
+This operation creates a new exercise log in the service.
 
 ---
 
 ## Endpoint structure
 
 ```shell
-PUT /userExerciseLogs/{id}
+POST /userExerciseLogs
 ```
-
----
-
-## Path parameters
-
-| Parameter | Type | Required | Description |
-|---|---|---|---|
-| `id` | integer | Yes | The unique identifier of the exercise log to update |
 
 ---
 
@@ -34,7 +26,7 @@ PUT /userExerciseLogs/{id}
 
 ## Request body
 
-All fields required for a `PUT` operation.
+All fields required unless marked as optional.
 
 | Property | Type | Required | Description |
 |---|---|---|---|
@@ -49,46 +41,46 @@ All fields required for a `PUT` operation.
 
 ---
 
-## Example: Update complete exercise log
+## Example request
 
 **Request:**
 
 ```bash
-curl -X PUT {base_url}/userExerciseLogs/1 \
+curl -X POST {base_url}/userExerciseLogs \
   -H "Content-Type: application/json" \
   -d '{
     "userId": 1,
     "exerciseType": "stretch",
     "exerciseName": "Piriformis Stretch",
-    "date": "2025-10-24",
+    "date": "2025-11-14",
     "painBefore": 7,
-    "painAfter": 4,
+    "painAfter": 5,
     "effective": true,
-    "notes": "Felt immediate relief in glute area. Held stretch for 45 seconds."
+    "notes": "Felt immediate relief in glute area"
   }'
 ```
 
 **Response - Success:**
 
-Returns the complete updated exercise log object with all properties.
+Returns the newly created exercise log object with all properties including the assigned ID.
 
 ```json
 {
-  "id": 1,
+  "id": 5,
   "userId": 1,
   "exerciseType": "stretch",
   "exerciseName": "Piriformis Stretch",
-  "date": "2025-10-24",
+  "date": "2025-11-14",
   "painBefore": 7,
-  "painAfter": 4,
+  "painAfter": 5,
   "effective": true,
-  "notes": "Felt immediate relief in glute area. Held stretch for 45 seconds."
+  "notes": "Felt immediate relief in glute area"
 }
 ```
 
 **Successful response includes:**
 
-- `id` - Exercise log identifier - unchanged
+- `id` - Newly assigned unique exercise log identifier
 - `userId` - ID of the user who recorded this exercise
 - `exerciseType` - Exercise type performed
 - `exerciseName` - Name of the exercise performed
@@ -102,33 +94,33 @@ Returns the complete updated exercise log object with all properties.
 
 ## More examples
 
-### Update log with different exercise type
+### Log strengthening exercise
 
 ```json
 {
   "userId": 2,
   "exerciseType": "strengthening",
-  "exerciseName": "Pelvic Tilts",
-  "date": "2025-10-28",
+  "exerciseName": "Glute Bridges",
+  "date": "2025-11-15",
   "painBefore": 6,
-  "painAfter": 5,
+  "painAfter": 4,
   "effective": true,
-  "notes": "Completed 3 sets of 15 reps"
+  "notes": "Completed 3 sets of 12 reps"
 }
 ```
 
-### Update log marking exercise as not effective
+### Log ineffective exercise
 
 ```json
 {
   "userId": 3,
   "exerciseType": "stretch",
   "exerciseName": "Cobra Stretch",
-  "date": "2025-10-29",
+  "date": "2025-11-16",
   "painBefore": 8,
   "painAfter": 8,
   "effective": false,
-  "notes": "No change in pain level. Will try different stretch tomorrow."
+  "notes": "No change in pain level"
 }
 ```
 
@@ -137,5 +129,5 @@ Returns the complete updated exercise log object with all properties.
 ## Related topics
 
 - [Exercise logs resource page](user-exercise-logs.md)
-- [Get exercise log by ID](get-exercise-by-id.md)
-- [Delete exercise log by ID](delete-exercise.md)
+- [Get exercise by ID](get-exercise-by-id.md)
+- [Patch exercise log by ID](patch-exercise-by-id.md)

@@ -1,16 +1,15 @@
 ---
-
 layout: default
 ---
 # Authentication
 
 ## Development environment
 
-This guide describes a local test version of the Sciatica Sisters API. It runs on json-server.
+This guide uses a test version of the Sciatica Sisters API that runs on json-server.
 
 **No login needed** for local testing and learning.
 
-All endpoints work without login at `http://localhost:3000`.
+All endpoints work without login on your local server at `{base_url}`.
 
 ---
 
@@ -34,7 +33,7 @@ You can learn more in the [Mozilla Web Docs Authentication Guide](https://develo
 **Example request with authorization:**
 
 ```bash
-curl -X GET http://api.sciaticasisters.com/users/1 \
+curl -X GET {base_url}/users/1 \
   -H "Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ="
 ```
 
@@ -61,7 +60,7 @@ In production, different user types have different access rights:
 
 ### Security needs
 
-A production version of this API would need:
+A production version of this API would need to account for the following:
 
 - **Health Insurance Portability and Accountability Act** - Meeting healthcare data privacy rules
 - **HTTPS/Transport Layer Security encryption** - All data sent securely
@@ -73,7 +72,5 @@ A production version of this API would need:
 
 ## For this guide
 
-This is a local test setup for learning. All examples in tutorials and reference pages show requests
-without login.
-
+The tutorials and examples in this guide show requests without login for simplicity and learning purposes.
 In production use, every request would include the `Authorization` header shown prior.

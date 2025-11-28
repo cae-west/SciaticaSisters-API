@@ -2,17 +2,25 @@
 layout: default
 ---
 
-# Post a new user
+# Put user by ID
 
-This operation creates a new user profile in the service.
+This operation replaces all properties of an existing user by ID.
 
 ---
 
 ## Endpoint structure
 
 ```shell
-POST /users
+PUT /users/{id}
 ```
+
+---
+
+## Path parameters
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `id` | integer | Yes | The unique identifier of the user to update |
 
 ---
 
@@ -26,7 +34,7 @@ POST /users
 
 ## Request body
 
-All fields required unless marked as optional.
+All fields required for a `PUT` operation.
 
 | Property | Type | Required | Description |
 |---|---|---|---|
@@ -45,39 +53,39 @@ All fields required unless marked as optional.
 **Request:**
 
 ```bash
-curl -X POST {base_url}/users \
+curl -X PUT {base_url}/users/1 \
   -H "Content-Type: application/json" \
   -d '{
-    "firstName": "Emma",
-    "lastName": "Davis",
-    "email": "e.davis@example.com",
-    "age": 45,
-    "painLocation": "glute-right",
-    "painLevel": 6,
-    "diagnosisDate": "2025-01-15"
+    "firstName": "Sarah",
+    "lastName": "Martinez",
+    "email": "s.martinez@example.com",
+    "age": 43,
+    "painLocation": "glute-left",
+    "painLevel": 4,
+    "diagnosisDate": "2024-03-15"
   }'
 ```
 
 **Response - Success:**
 
-Returns the newly created user object with all properties including the assigned ID.
+Returns the complete updated user object with all properties.
 
 ```json
 {
-  "id": 5,
-  "firstName": "Emma",
-  "lastName": "Davis",
-  "email": "e.davis@example.com",
-  "age": 45,
-  "painLocation": "glute-right",
-  "painLevel": 6,
-  "diagnosisDate": "2025-01-15"
+  "id": 1,
+  "firstName": "Sarah",
+  "lastName": "Martinez",
+  "email": "s.martinez@example.com",
+  "age": 43,
+  "painLocation": "glute-left",
+  "painLevel": 4,
+  "diagnosisDate": "2024-03-15"
 }
 ```
 
 **Successful response includes:**
 
-- `id` - Newly assigned unique user identifier
+- `id` - User identifier - unchanged
 - `firstName` - User's first name
 - `lastName` - User's last name
 - `email` - User's email address
@@ -85,38 +93,6 @@ Returns the newly created user object with all properties including the assigned
 - `painLocation` - Location of sciatica pain
 - `painLevel` - Current pain level on a 1-10 scale
 - `diagnosisDate` - Date of sciatica diagnosis
-
----
-
-## More examples
-
-### Create user with lower back pain
-
-```json
-{
-  "firstName": "John",
-  "lastName": "Martinez",
-  "email": "j.martinez@example.com",
-  "age": 38,
-  "painLocation": "lower-back-right",
-  "painLevel": 8,
-  "diagnosisDate": "2024-12-01"
-}
-```
-
-### Create user with calf pain
-
-```json
-{
-  "firstName": "Lisa",
-  "lastName": "Chen",
-  "email": "l.chen@example.com",
-  "age": 29,
-  "painLocation": "calf-left",
-  "painLevel": 4,
-  "diagnosisDate": "2025-02-10"
-}
-```
 
 ---
 

@@ -4,8 +4,9 @@ layout: default
 
 # Tutorial: Update a user's pain level
 
-In this tutorial, you'll learn how to update a user's pain level using the `PATCH` method to
-change a specific field in the user resource.
+In this tutorial, you'll learn how to update a user's pain level using the `PATCH` method to change
+a specific field in the user resource. Whether a user's pain increases or decreases, keeping this
+information current helps them track and change their recovery approach, if necessary.
 
 Expect this tutorial to take about 10 minutes to complete.
 
@@ -29,7 +30,9 @@ This example updates the pain level for a user from 7 to 4.
     json-server -w sciatica-sisters-db-source.json
     ```
 
-2. Open Postman and create a new request:
+### Postman request
+
+1. Open Postman and create a new request:
    1. Click **New** > **HTTP** or the **+** icon in the header.
    2. Set the request method to `PATCH` using the corresponding dropdown menu.
    3. In the request URL field, enter:
@@ -38,13 +41,13 @@ This example updates the pain level for a user from 7 to 4.
       {base_url}/users/1
       ```
 
-3. Set up the request headers:
+2. Set up the request headers:
    1. Click the **Headers** tab below the URL field.
    2. Add a header:
       - **Key:** `Content-Type`
       - **Value:** `application/json`
 
-4. Set up the request body:
+3. Set up the request body:
    1. Click the **Body** tab below the URL field.
    2. Select **raw** from the radio button options.
    3. Select **JSON** from the dropdown menu on the right.
@@ -56,9 +59,9 @@ This example updates the pain level for a user from 7 to 4.
       }
       ```
 
-5. Click **Send** to make the request.
+4. Click **Send** to make the request.
 
-6. The system returns the complete updated user object with the new pain level. Note that only the `painLevel`
+5. The system returns the complete updated user object with the new pain level. Note that only the `painLevel`
 field changed, while all other fields remained the same.
 
     ```json
@@ -74,27 +77,82 @@ field changed, while all other fields remained the same.
     }
     ```
 
-## Verify your results
+### cURL request
 
-1. To confirm the update was successful, retrieve the user's current information:
-   1. Create a new request in Postman.
-   2. Set the request method to `GET`.
-   3. In the request URL field, enter:
+1. Open your terminal and run this command:
 
-      ```shell
-      {base_url}/users/1
-      ```
+   ```bash
+   curl -X PATCH {base_url}/users/1 \
+     -H "Content-Type: application/json" \
+     -d '{"painLevel": 4}'
+   ```
 
-   4. Click **Send**.
+2. The system returns the complete updated user object with the new pain level. Note that only the `painLevel`
+field changed, while all other fields remained the same.
+
+    ```json
+    {
+      "id": 1,
+      "firstName": "Sarah",
+      "lastName": "Johnson",
+      "email": "s.johnson@example.com",
+      "age": 42,
+      "painLocation": "lower-back-left",
+      "painLevel": 4,
+      "diagnosisDate": "2024-03-15"
+    }
+    ```
+
+## Check your results
+
+### Postman verification
+
+1. Create a new request in Postman.
+2. Set the request method to `GET`.
+3. In the request URL field, enter:
+
+   ```shell
+   {base_url}/users/1
+   ```
+
+4. Click **Send**.
+
+5. You should see that the `painLevel` is now 4 instead of the original value of 7. All other user
+information remains unchanged.
+
+### cURL verification
+
+1. Run this command:
+
+   ```bash
+   curl -X GET {base_url}/users/1
+   ```
 
 2. You should see that the `painLevel` is now 4 instead of the original value of 7. All other user
 information remains unchanged.
 
+## Common errors and troubleshooting
+
+### Pain level not updating
+
+If the pain level doesn't change, verify you're using the correct field name `painLevel` in camelCase.
+Using `pain_level`, `PainLevel`, or other variations won't work.
+
+### Invalid pain level value
+
+The pain level must be a number between 1 and 10. Values outside this range or non-numeric values
+may cause errors or unexpected behavior.
+
+### 404 not found error
+
+If you receive this error, the user ID in your request URL doesn't exist. Verify the correct user ID
+by calling `GET` on `/users` first to see all available users.
+
 ## What you learned
 
 After completing this tutorial, you now know how to update a specific field in a user resource using
-the `PATCH` method with Postman. This is useful when a user reports changes to their pain level without
-needing to update their entire profile.
+the `PATCH` method with Postman or cURL. This is useful when a user reports changes to their pain level
+without needing to update their entire profile. You're now able to accurately track user progress.
 
 ## Next steps
 
