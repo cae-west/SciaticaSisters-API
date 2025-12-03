@@ -3,6 +3,19 @@
 
 @import "{{ site.theme }}";
 
+/* Responsive logo */
+@media screen and (max-width: 768px) {
+  header .inner img {
+    max-width: 300px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header .inner img {
+    max-width: 200px !important;
+  }
+}
+
 /* Sidebar Styles */
 #content-wrapper .inner {
   display: flex;
