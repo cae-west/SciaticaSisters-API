@@ -21,8 +21,6 @@ to help manage these ongoing issues through exercise tracking and pain pattern a
 **[Getting Started](overview/getting-started.md)** - Ready to get started? Learn what you need to set
 up your system.
 
-**[Full Topic List](overview/topic-list.md)** - See a full list of tutorials and reference docs.
-
 ---
 
 ## What's an API?
