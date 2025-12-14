@@ -12,7 +12,7 @@ to help manage these ongoing issues through exercise tracking and pain pattern a
 **Learn more about sciatica:**
 
 - [Mayo Clinic - Sciatica](https://www.mayoclinic.org/diseases-conditions/sciatica/symptoms-causes/syc-20377435)
-- [National Institute of Neurological Disorders and Stroke - Low Back Pain](https://www.ninds.nih.gov/health-information/disorders/low-back-pain)
+- [Cleveland Clinic - Lower Back Pain](https://my.clevelandclinic.org/health/diseases/7936-lower-back-pain)
 
 ---
 
